@@ -1,0 +1,14 @@
+<div class="card" style="width: 40rem;">
+    <div class="card-header">
+      Usuario: {{nombre}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="mensaje"></textarea>
+        </div>
+        <button class="btn btn-primary" (click)="enviar()">Guardar</button>
+      </li>
+    </ul>
+  </div>
