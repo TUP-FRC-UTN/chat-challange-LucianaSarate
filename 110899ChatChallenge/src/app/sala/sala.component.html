@@ -1,0 +1,27 @@
+<div class="container">
+    <br>    
+    <div class="card" style="width: 95 rem;">
+        <div class="card-header">
+          Sala de Chat
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <section class="zona">
+                @for (u of usuario; track $index) {
+                  <p style="float: right; color: rgba(141, 140, 138, 0.501);">{{u.fecha | date: 'hh:mm'}}</p>
+                  <p><b>{{u.nombre}}:</b> {{u.texto}}</p>
+                }
+              </section>
+            
+               
+            </li>
+        </ul>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-6"><app-mensajes [nombre]="'Pepe'" (usu)="recibirUsuario($event)"></app-mensajes></div>
+        <div class="col-6"><app-mensajes [nombre]="'María'" (usu)="recibirUsuario($event)"></app-mensajes></div>
+      </div>
+      
+      
+</div>
